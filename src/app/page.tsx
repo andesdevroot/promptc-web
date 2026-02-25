@@ -95,6 +95,8 @@ function TerminalHero() {
 
 export default function Home() {
   const [copied, setCopied] = useState(false);
+  
+  // URL actualizada apuntando a "master"
   const installCmd = "curl -sSL https://raw.githubusercontent.com/andesdevroot/promptc/master/install.sh | bash";
 
   const copyToClipboard = () => {
@@ -149,9 +151,15 @@ export default function Home() {
             Prompt Engineering is <br />
             <span className="text-cyan-500 drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">Software Engineering.</span>
           </h1>
-          <p className="text-zinc-500 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
-            PROMPTC es un compilador nativo en Go que garantiza soberanía de datos y determinismo industrial. 
-            Intercepta, valida y optimiza tus prompts antes de la inferencia.
+          
+          {/* --- COPY ACTUALIZADO Y VENDIBLE --- */}
+          <p className="text-zinc-400 max-w-2xl mx-auto text-sm md:text-base leading-relaxed">
+            PROMPTC es un compilador nativo en Go que garantiza soberanía de datos y determinismo industrial. <br className="hidden md:block" />
+            <span className="inline-flex items-center gap-2 mt-4 mb-3 px-4 py-1.5 bg-cyan-950/30 border border-cyan-500/40 text-cyan-300 rounded-full font-semibold shadow-[0_0_15px_rgba(34,211,238,0.15)] text-xs md:text-sm">
+              <Zap size={14} className="text-yellow-400" /> Plug & Play en Claude Desktop
+            </span>
+            <br className="hidden md:block" />
+            <span className="inline-block mt-2">Instálalo en un solo comando para interceptar, validar y optimizar tus prompts directamente en tu IDE antes de la inferencia.</span>
           </p>
         </section>
 
@@ -180,7 +188,7 @@ export default function Home() {
 
         <footer className="py-12 border-t border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-6 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
           <div className="text-[10px] uppercase tracking-widest text-zinc-500">
-            © 2026 Cesar Rivas • La Serena, Chile 🇨🇱
+            © 2026 Cesar Rivas • Elqui Valley, Chile 🇨🇱
           </div>
           <div className="flex gap-6 text-zinc-400">
             <Github size={18} className="hover:text-cyan-500 transition-colors cursor-pointer" />
